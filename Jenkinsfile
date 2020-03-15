@@ -1,26 +1,19 @@
 pipeline {
     agent any 
     stages {
-        stage('Checkout external proj') {
-            steps {
-                git branch: 'master',
-                    url: 'ssh://git@github.com:cemtopkaya/jenkinsfile_repo.git'
-                sh "ls -lat"
-            }
-        }
         stage('Build') { 
             steps {
-                echo "build step"
+                echo "build step çalıştı"
             }
         }
         stage('Test') { 
             steps {
-                echo "test step"
+                echo "test step çalıştı"
             }
         }
         stage('Deploy') { 
             steps {
-                echo "deploy step"
+                echo "deploy step çalıştı"
             }
         }
     }
